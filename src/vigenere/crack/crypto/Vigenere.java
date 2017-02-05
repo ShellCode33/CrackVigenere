@@ -227,10 +227,7 @@ public class Vigenere {
                     key += letters.get(0);
                 }
 
-                System.out.println("\nIt looks like the key is : " + key);
-                System.out.println("\nHere's the possible decrypted text : ");
-                System.out.println(decode(key));
-                System.exit(0);
+                best_keys_score.put(key, findCoincidenceIndex(decode(key)));
             }
 
             else {
