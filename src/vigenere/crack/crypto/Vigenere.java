@@ -196,9 +196,9 @@ public class Vigenere {
 
                 loop_index = 0;
 
-                //On prend touts les scores qui sont au maximum 1.2 fois plus grand que le plus petite valeur
+                //On prend touts les scores qui sont au maximum 1.5 fois plus grand que le plus petite valeur
                 for(Float f : scores) {
-                    if(f <= lowest_value*1.2 && !letters_to_bruteforce.get(i).contains((char)('A'+loop_index)))
+                    if(f <= lowest_value*1.5 && !letters_to_bruteforce.get(i).contains((char)('A'+loop_index)))
                         letters_to_bruteforce.get(i).add((char)('A'+loop_index));
 
                     loop_index++;
