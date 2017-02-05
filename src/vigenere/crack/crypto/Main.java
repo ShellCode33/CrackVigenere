@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         String cipher = "Veyysuiz k uuwj qfmnd ml wqu wecspe vc drwsov lw apui do ziycovve wimw sov glo vedyuzzewinl jpekuo ! Mmhpfjwiyrnslu e'isd ge hyt ? Vr rozafaiv pe msdw bf mmgorejc fjx qeesa gngsscmbdc b tescir kg mr glo isl yvjwi vsnysf hye vi twvuv";
+
         //Si des arguments sont passés en paramètre du programme, on utilise les arguments comme texte à traiter
         if(args.length > 0) {
             cipher = args[0];

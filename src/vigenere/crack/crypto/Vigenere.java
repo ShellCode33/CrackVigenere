@@ -196,9 +196,9 @@ public class Vigenere {
 
                 loop_index = 0;
 
-                //On prend touts les scores qui sont au maximum 1.5 fois plus grand que le plus petite valeur
+                //On prend touts les scores qui sont au maximum 1.25 fois plus grand que le plus petite valeur
                 for(Float f : scores) {
-                    if(f <= lowest_value*1.5 && !letters_to_bruteforce.get(i).contains((char)('A'+loop_index)))
+                    if(f <= lowest_value*1.25 && !letters_to_bruteforce.get(i).contains((char)('A'+loop_index)))
                         letters_to_bruteforce.get(i).add((char)('A'+loop_index));
 
                     loop_index++;
@@ -227,7 +227,19 @@ public class Vigenere {
                     key += letters.get(0);
                 }
 
-                best_keys_score.put(key, findCoincidenceIndex(decode(key)));
+                System.out.println("Looks like the key is : " + key);
+                System.out.println("Decoded message : " + decode(key));
+                System.out.print("Does the text makes sense ? Do you want to continue searching (Y/N) ? ");
+
+                Scanner scanner = new Scanner(System.in);
+
+                String read = "Dummy";
+                while(read.charAt(0) != 'Y' && read.charAt(0) != 'N') {
+                    read = scanner.nextLine();
+                }
+
+                if(read.charAt(0) == 'N')
+                    System.exit(0);
             }
 
             else {
