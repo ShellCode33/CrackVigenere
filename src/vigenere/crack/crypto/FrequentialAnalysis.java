@@ -86,6 +86,7 @@ public class FrequentialAnalysis {
         return (float)getNbOccurrencesOf(c) / nb_letters;
     }
 
+    @SuppressWarnings("unchecked")
     //retourne la nième lettre avec la plus grande frequence d'apparation
     public char getNthLetterWithHighestFrequency(int n) {
 
