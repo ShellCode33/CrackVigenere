@@ -227,8 +227,10 @@ public class Vigenere {
                     key += letters.get(0);
                 }
 
+                String decoded = decode(key);
+
                 System.out.println("Looks like the key is : " + key);
-                System.out.println("Decoded message : " + decode(key));
+                System.out.println("Decoded message : " + decoded);
                 System.out.print("Does the text makes sense ? Do you want to continue searching (Y/N) ? ");
 
                 Scanner scanner = new Scanner(System.in);
@@ -240,6 +242,8 @@ public class Vigenere {
 
                 if(read.charAt(0) == 'N')
                     System.exit(0);
+
+                best_keys_score.put(key, findCoincidenceIndex(decoded));
             }
 
             else {
