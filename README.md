@@ -1,17 +1,17 @@
 # CrackVigenere
 Programme destiné à casser l'algorithme de Vigenere
 
-##Installation
+## Installation
 ```
 git clone https://github.com/ShellCode33/CrackVigenere.git && cd CrackVigenere
 ```
 
-##Compilation
+## Compilation
 ```
 javac src/vigenere/crack/crypto/*.java
 ```
 
-##Lancement
+## Lancement
 ```
 cd src && java vigenere.crack.crypto.Main [cipher]
 ```
